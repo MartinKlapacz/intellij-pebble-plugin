@@ -1,0 +1,20 @@
+{
+  parserClass="com.github.martinklapacz.intellijplugintutorial.lang.PebbleParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Pebble"
+  psiImplClassSuffix="Impl"
+  psiPackage="com.github.martinklapacz.intellijplugintutorial.lang.psi"
+  psiImplPackage="com.github.martinklapacz.intellijplugintutorial.lang.psi.impl"
+
+  elementTypeHolderClass="com.github.martinklapacz.intellijplugintutorial.lang.psi.PebbleTypes"
+  elementTypeClass="com.github.martinklapacz.intellijplugintutorial.lang.psi.PebbleElementType"
+  tokenTypeClass="com.github.martinklapacz.intellijplugintutorial.lang.psi.PebbleTokenType"
+}
+
+simpleFile ::= item_*
+
+private item_ ::= (property|COMMENT|CRLF)
+
+property ::= (KEY? SEPARATOR VALUE?) | KEY
