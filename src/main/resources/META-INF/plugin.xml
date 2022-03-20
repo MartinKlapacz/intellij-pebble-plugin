@@ -9,6 +9,16 @@
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.martinklapacz.intellijplugintutorial.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.martinklapacz.intellijplugintutorial.services.MyProjectService"/>
+
+
+        <!-- File-type Factory -->
+
+        <fileType
+                name="Pebble File"
+                implementationClass="com.github.martinklapacz.intellijplugintutorial.lang.PebbleFileType"
+                fileNames="INSTANCE"
+                language="Pebble"
+                extensions="pebble"/>
     </extensions>
 
     <applicationListeners>
