@@ -128,6 +128,19 @@ tasks {
         // if set, the plugin will remove a parser output file and psi output directory before generating new ones. Default: false
         purgeOldFiles.set(true)
     }
+
+    generateLexer {
+        // source flex file
+        source.set("src/main/kotlin/com/github/martinklapacz/intellijplugintutorial/lang/grammars/Pebble.flex")
+        // target directory for lexer
+        targetDir.set("src/main/gen/com/github/martinklapacz/intellijplugintutorial/lang")
+        // target classname, target file will be targetDir/targetClass.java
+        targetClass.set("PebbleLexer")
+        // optional, path to the task-specific skeleton file. Default: none
+//        skeleton.set("/some/specific/skeleton")
+        // if set, plugin will remove a lexer output file before generating new one. Default: false
+        purgeOldFiles.set(true)
+    }
 }
 
 sourceSets["main"].java.srcDirs("src/main/gen")
