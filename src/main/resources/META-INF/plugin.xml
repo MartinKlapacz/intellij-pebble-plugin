@@ -24,6 +24,14 @@
                 language="Pebble"
                 implementationClass="com.github.martinklapacz.intellijplugintutorial.lang.PebbleParserDefinition"/>
 
+        <lang.syntaxHighlighterFactory
+                language="Pebble"
+                implementationClass="com.github.martinklapacz.intellijplugintutorial.lang.PebbleSyntaxHighlighterFactory"/>
+
+        <colorSettingsPage
+                implementation="com.github.martinklapacz.intellijplugintutorial.lang.PebbleColorSettingsPage"/>
+
+
     </extensions>
 
     <applicationListeners>
