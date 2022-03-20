@@ -13,5 +13,5 @@ object PebbleFileType: LanguageFileType(PebbleLanguage) {
 
     override fun getCharset(file: VirtualFile, content: ByteArray?): String = "UTF-8"
 
-    override fun getIcon(): Icon? = null
+    override fun getIcon(): Icon = PebbleIcons.FILE
 }
