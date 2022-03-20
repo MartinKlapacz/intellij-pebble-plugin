@@ -19,6 +19,11 @@
                 fileNames="INSTANCE"
                 language="Pebble"
                 extensions="pebble"/>
+
+        <lang.parserDefinition
+                language="Pebble"
+                implementationClass="com.github.martinklapacz.intellijplugintutorial.lang.PebbleParserDefinition"/>
+
     </extensions>
 
     <applicationListeners>
